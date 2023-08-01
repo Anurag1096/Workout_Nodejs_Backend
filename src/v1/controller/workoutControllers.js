@@ -13,8 +13,18 @@ const getOneWorkout=(req,res)=>{
 }
 // post
 const createNewWorkout=(req,res)=>{
-    const createWorkout=WorkoutService.createNewWorkout();
-    res.send(`create a single workout for the user`);
+    const newWorkout={
+        name:req.body.name,
+        mode:req.body.mode,
+        equipment:req.body.equipment,
+        exercise:req.body.exercise,
+    }
+    try{
+        const createWorkout= WorkoutService.createNewWorkout(newWorkout);
+        res.status(201).send({status:"ok",message:"created workout succesfully"});
+    }catch(error){
+        res.status(200).send({status:"failed",error:"cannot create new workout"})
+    }
 }
 // patch
 const updateOneWorkout=(req,res)=>{

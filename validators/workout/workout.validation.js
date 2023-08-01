@@ -6,11 +6,11 @@ module.exports={
         let value;
         try {
             value=await workout.validate(req.body);
-            next();
+            next()
         }catch(error){
           res.json({
             status:0,
-            message:value.error.details[0].message,
+            message:"wrong input",
           })
         }
     }

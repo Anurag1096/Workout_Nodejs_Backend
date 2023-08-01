@@ -1,7 +1,7 @@
 const express=require("express");
 const router= express.Router();
 const WorkoutController=require("../controller/workoutControllers");
-const {adWorkoutValidation, addWorkoutValidation}=require("../../../validators/workout/workout.validation")
+const {addWorkoutValidation}=require("../../../validators/workout/workout.validation")
 // for multiple user
 router.get("/",WorkoutController.getAllWorkout);
 // for single user
