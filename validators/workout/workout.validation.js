@@ -8,6 +8,7 @@ module.exports={
             value=await workout.validate(req.body);
             next()
         }catch(error){
+            console.log("there is an error")
           res.json({
             status:0,
             message:"wrong input",

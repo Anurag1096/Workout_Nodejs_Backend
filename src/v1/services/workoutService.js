@@ -10,13 +10,14 @@ const getOneWorkout=(workoutId)=>{
     return
 }
 const  createNewWorkout=(newWorkout)=>{
-    console.log("newe",newWorkout)
+    // console.log("newe",newWorkout)
     const workoutToInsert = {
         ...newWorkout,
         id: uuid(),
         createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
         updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
       };
+      console.log(workoutToInsert)
       const createdWorkout = db_Workout.createNewWorkout(workoutToInsert);
       return createdWorkout;    
 }
