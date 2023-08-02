@@ -17,7 +17,6 @@ const  createNewWorkout=(newWorkout)=>{
         createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
         updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
       };
-      console.log(workoutToInsert)
       const createdWorkout = db_Workout.createNewWorkout(workoutToInsert);
       return createdWorkout;    
 }
