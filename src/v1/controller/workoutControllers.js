@@ -22,7 +22,7 @@ const createNewWorkout=(req,res)=>{
             equipment:req.body.equipment,
         }
         const createWorkout= WorkoutService.createNewWorkout(newWorkout);
-        res.status(201).send({status:"ok",message:"created workout succesfully",data:createWorkout});
+        res.status(201).send({status:"ok created",message:"created workout succesfully",data:createWorkout});
     }catch(error){
         res.status(200).send({status:"failed",error:"cannot create new workout"})
     }
