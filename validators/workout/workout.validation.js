@@ -10,7 +10,7 @@ module.exports={
         }catch(error){
             console.log("there is an error")
           res.json({
-            status:0,
+            status:2,
             message:"wrong input",
           })
         }
